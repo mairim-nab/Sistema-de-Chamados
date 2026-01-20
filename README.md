@@ -15,4 +15,7 @@ manipulação do DOM e regras de negócio com JavaScript puro.
 - CSS3
 - JavaScript (Vanilla JS)
 
-## Organização do projeto
+## Objetivo
+Projeto criado com foco em aprendizado e portfólio, simulando a interface de um sistema
+simples de chamados e atendimento ao usuário.
+
