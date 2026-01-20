@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chamado</title>
+
+    <!-- ÍCONES -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="header">Chamado</div>
+
+    <div class="section">
+      <div class="card">
+        <div class="title">
+          Status
+          <div class="status-row" id="statusText">
+            <span class="dot green active"></span> Aberto
+          </div>
+        </div>
+
+        <div class="status-options">
+          <div
+            class="dot green active"
+            data-status="Aberto"
+            data-color="green"
+          ></div>
+          <div
+            class="dot yellow"
+            data-status="Em andamento"
+            data-color="yellow"
+          ></div>
+          <div class="dot red" data-status="Encerrado" data-color="red"></div>
+        </div>
+
+        <textarea class="description" placeholder="Descrição..."></textarea>
+      </div>
+
+      <div class="card">
+        <div class="title">Atendente</div>
+
+        <div class="attendant">
+          Nome do Suporte
+          <div class="icons">
+            <button class="icon-btn" id="viewAttendant">
+              <i class="fi fi-rs-user"></i>
+            </button>
+            <button class="icon-btn" id="callAttendant">
+              <i class="fi fi-rs-phone-call"></i>
+            </button>
+            <button class="icon-btn" id="chatAttendant">
+              <i class="fi fi-rs-comment"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="title" style="margin-top: 15px">Última Interação</div>
+        <div class="history" id="history">
+          <p>Chamado aberto.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="openMessage">
+          <i class="fi fi-rs-comments"></i>
+          Enviar<br />Mensagem
+        </button>
+
+        <button id="closeTicket">
+          <i class="fi fi-rs-check-circle"></i>
+          Encerrar<br />Chamado
+        </button>
+
+        <button id="rateService">
+          <i class="fi fi-rr-star"></i>
+          Avaliar<br />Atendimento
+        </button>
+      </div>
+    </div>
+
+    <!-- MODAL MENSAGEM -->
+    <div class="modal-bg" id="modal">
+      <div class="modal">
+        <div class="title">Nova mensagem</div>
+        <textarea
+          id="messageText"
+          placeholder="Digite sua mensagem..."
+        ></textarea>
+
+        <div class="modal-actions">
+          <button id="sendMessage">Enviar</button>
+          <button id="closeModal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL AVALIAÇÃO -->
+    <div class="modal-bg" id="rateModal">
+      <div class="modal">
+        <div class="title">Avaliar Atendimento</div>
+
+        <div class="stars">
+          <i class="fi fi-rr-star" data-value="1"></i>
+          <i class="fi fi-rr-star" data-value="2"></i>
+          <i class="fi fi-rr-star" data-value="3"></i>
+          <i class="fi fi-rr-star" data-value="4"></i>
+          <i class="fi fi-rr-star" data-value="5"></i>
+        </div>
+
+        <textarea
+          id="rateComment"
+          placeholder="Comentário (opcional)..."
+        ></textarea>
+
+        <div class="modal-actions">
+          <button id="submitRate">Enviar</button>
+          <button id="closeRate">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
